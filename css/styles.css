@@ -1,0 +1,151 @@
+/*CSS Styles*/
+
+*{
+	padding: 0;
+	margin:0;
+}
+
+#full-container{
+	width: 1517px;
+	margin: auto;
+}
+
+#top-container{
+	background-color: grey;
+	padding: 10px 46px;
+	margin: 0 auto;
+	width: 80%;
+}
+
+#top-container h1{
+	text-align: center;
+	color: white;
+}
+
+#home-img{
+	background-color: #00bcd4;
+	height: 600px;
+	width: 86%;
+	margin:15px auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#home-img h1{
+	color: white;
+}
+
+
+/*Team Members*/
+
+#team{
+	margin: 60px auto;
+	width: 86%;
+}
+
+#team h1{
+	text-align: center;
+	margin-bottom: 30px;
+	font-size: 2.5em
+}
+
+.circle-img{
+	background-color: orange;
+	border-radius: 50%;
+	height: 250px;
+	width: 250px;
+	float: left;
+	margin:10px 38px;
+}
+
+
+/*About Section*/
+
+.about-h{
+	text-align: center;
+	margin-top: 25%;
+	margin-bottom: 30px;
+	font-size: 2.5em;
+}
+
+#about-us{
+	margin: 50px auto;
+	width: 86%;
+	clear: both;
+}
+
+.about-project{
+	background-color: #59405c;
+	width: 49%;
+	height: 610px;
+	float: left;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.about-project h1{
+	color: white;
+}
+
+.sub-projects{
+	background-color: purple;
+	width: 49%;
+	height: 194px;
+	position: relative;
+	left: 30px;
+	margin-bottom: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.sub-projects h1{
+	color: white;
+}
+
+
+/*Technology Section*/
+
+#technology{
+	margin: 60px auto;
+	width: 86%;
+}
+
+#technology h1{
+	text-align: center;
+	margin-bottom: 30px;
+	font-size: 2.5em;
+}
+
+.technology-box{
+	background-color: #d54062;
+	width: 291px;
+	padding: 2px;
+	height: 400px;
+	float: left;
+	margin: 15px;
+}
+
+
+/*footer section*/
+
+.foot-sec{
+	text-align: center;
+	margin:37.5% 0 1%;
+	font-size: 2.5em;
+}
+
+footer{
+	background-color: #f09ae9;
+	margin:0 auto;
+	width: 95%;
+	padding: 20px;
+	clear: both;
+}
+
+footer h2{
+	text-align: center;
+	color: white;
+}
