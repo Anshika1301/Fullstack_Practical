@@ -7,57 +7,116 @@
 }
 
 html{
+	scroll-padding-top: 90px;
 	scroll-behavior: smooth;
 }
 
-#full-container{
-	width: 99%;
-	margin: auto;
-}
-
-.top-container{
+.header{
 	background-color: grey;
 	width: 100%;
-	height: 65px;
-	display: flex;
-	justify-content: space-evenly;
-	justify-content: center;
-	align-items: center;
+	height: 70px;
 	position: fixed;
 	top: 0;
-	z-index: 1;
+	z-index:10;
 }
 
-.menu ul{
-	list-style-type: none;	
+.menu{
+	list-style-type: none;
+	float: right; 
 }
 
 .menu li{
 	display: inline-block;
-	padding: 0 30px;
-	font-family: Arial, Helvetica, sans-serif;
+	line-height: 70px;
+	width: 170px;
+	text-align: center;
 }
 
 .menu li a{
+	display: block;
 	text-decoration: none;
-	text-transform: uppercase;
 	color: white;
-	padding: 15px 35px;
-	font-size: 20px;
+	text-transform: uppercase;
+	font-family: Arial, Helvetica, sans-serif;
 	letter-spacing: 1px;
-	overflow: hidden;
+	font-size: 1.2em;
+	transition: .4s;  
 }
 
 .menu li a:hover{
-	background-color: white;
+	background-color:orange;
 	color: black;
-	transition: .5s;
-	
 }
+
+.show-btn{
+	float: right;
+}
+
+.show-btn, .hide-btn{
+	color: white;
+	line-height: 70px;
+	font-size: 30px;
+	transition: .4s;
+	display: none;
+}
+
+.show-btn:hover, .hide-btn:hover{
+	color: orange;
+}
+
+#chk{
+	position: absolute;
+	visibility: hidden;
+	z-index: -10;
+}
+
+@media(max-width: 855px)
+{
+	.show-btn, .hide-btn{
+		display: block;
+		padding: 0 20px;
+	}
+
+	.menu{
+		position: fixed;
+		top: 0;
+		right: -100%;
+		width: 100%;
+		height: 100vh;
+		background-color: black;
+		text-align: center;
+		padding: 100px 0;
+		transition: 1.5s;
+		line-height: normal;
+	}
+
+	.menu li{
+		display: block;
+		padding: 10px 0px;	
+		width: 100%;
+		text-align: center;
+	}
+
+	#chk:checked ~ .menu{
+		right: 0;
+	}
+
+	.hide-btn{
+		position:absolute;
+		right: 20px;
+		top: 20px;
+	}
+}
+
 
 #home-img{
 	margin-top: 90px;
 	width: 100%;
+}
+
+#home-img img{
+	width: 100%;
+	height: 95vh;
 }
 
 #home-img h1{
@@ -73,22 +132,28 @@ html{
 /*Team Members*/
 
 #team{
-	margin:100px auto;
+	margin:60px 0 60px;
 	width: 100%;
 }
 
 #team h1{
 	text-align: center;
-	margin-bottom: 50px;
+	margin-bottom: 60px;
 	font-size: 2.5em
+}
+
+.all-circle-img{
+	display: flex;
+	justify-content:center ;
+	align-items: center;
+	justify-content: space-evenly;
 }
 
 .circle-img{
 	border-radius: 50%;
-	float: left;
-	margin:2% 5% 5%;
+	 height: 260px;
+	 width: 260px; 
 }
-
 
 
 /*About Section*/
@@ -164,7 +229,7 @@ html{
 	height: 430px;
 	border-radius: 10px;
 	float: left;
-	margin: 30px 30px 80px;
+	margin: 2% 5% 5%;
 }
 
 .technology-img{
@@ -209,11 +274,14 @@ html{
 
 
 /*footer section*/
+footer{
+	clear: both;
+}
 
-.foot-sec{
+#contact h1{
 	text-align: center;
 	font-size: 2.5em;
-	margin: 30px;
+	margin: 30px 0;
 }
 
 .footer-bg{
@@ -234,4 +302,721 @@ footer p{
 	justify-content: center;
 	align-items: center;
 	margin-top: 15px;
+}
+
+
+/* Media Query */
+
+@media(min-width:2000px)
+{
+	
+	#technology{
+		margin: 60px auto;
+		width: 100%;
+	}
+
+	#technology h1{
+		text-align: center;
+		margin-bottom: 40px;
+		font-size: 2.5em;
+	}
+
+	.technology-box{
+		background-color: #e4e3e3;
+		width: 450px;
+		padding: 2px;
+		height: 600px;
+		border-radius: 10px;
+		float: left;
+		margin: 2% 4% 5%;
+	}
+
+	.technology-img{
+		width: 100%;
+		border-radius: 10px;
+	}
+
+	.img2
+	{
+		height: 210px;
+	}
+
+	.technology-para{
+		text-align: justify;
+		line-height: 2;
+		word-spacing: 6px;
+		margin:0 10px 10px;
+		color: black;
+		letter-spacing: 2px;
+	}
+
+	#technology h3{
+		margin:0;
+		margin: 10px 0;
+		text-align: center;
+	}
+
+	#technology a{
+		display: block;
+		background-color: red;
+		color: white;
+		text-decoration: none;
+		border-radius: 10px; 
+		width: 450px;
+		height: 48px;
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 2% 0;
+		margin-top: 150px;
+		font-size: 38px;
+		letter-spacing: 2px;
+	}
+
+	#technology a:hover{
+		background-color: blue;
+	}
+}
+
+@media(max-width:2645px)
+{
+	.technology-box{
+		margin: 2% 3% 5%;
+	}
+}
+
+@media(max-width:2370px)
+{
+	.technology-box{
+		margin: 2% 2% 5%;
+	}
+}
+
+@media(max-width:2140px)
+{
+	.technology-box{
+		margin: 2% 1% 5%;
+	}
+}
+
+@media(max-width:1999px)
+{
+	.technology-box{
+		margin-left: 6%;
+	}
+}
+
+@media(max-width:1755px)
+{
+	.technology-box{
+		margin-left: 5%;
+	}
+}
+
+@media(max-width:1660px)
+{
+	.technology-box{
+		margin-left: 4%;
+	}
+}
+
+@media(max-width:1580px)
+{
+	.technology-box{
+		margin-left: 3%;
+	}
+}
+
+@media(max-width:1505px)
+{
+	.technology-box{
+		margin-left: 2%;
+	}
+}
+
+@media(max-width:1435px)
+{
+	.technology-box{
+		margin-left: 1%;
+	}
+}
+
+@media(max-width:1375px)
+{
+	.technology-box{
+		margin-left: 0.5%;
+	}
+}
+
+@media(max-width:1345px)
+{
+	.technology-box{
+		margin-left: 0%;
+	}
+}
+
+@media(max-width:1315px)
+{
+	.technology-box{
+		margin-left: 0%;
+		margin-right: 0.5%;
+	}
+}
+
+@media(max-width:1290px)
+{
+	.technology-box{
+		margin-left: 16%;
+		margin-right: 0%;
+	}
+}
+
+
+
+@media(max-width:1199px)
+{
+	
+	/*Team Members*/
+
+	#team{
+		width: 100%;
+		
+	}
+
+	#team h1{
+		text-align: center;
+		font-size: 2.5em
+	}
+
+	.all-circle-img{
+		display: inline;
+	}
+
+	.all-circle-img img{
+		border-radius: 50%;
+		float: left;
+		margin:2% 0;
+		margin-left: 18%;
+	}
+
+	.technology-box{
+		margin-left: 14%;
+		margin-right: 0%;
+	}
+}
+
+@media(max-width:1000px)
+{
+	.all-circle-img img{
+
+		margin-left: 14%;
+	}
+
+	.technology-box{
+		margin-left: 12%;
+		margin-right: 0%;
+	}
+}
+
+@media(max-width:950px)
+{
+	.technology-box{
+		margin-left: 10%;
+		margin-right: 0%;
+	}
+}
+
+@media(max-width:800px)
+{
+	#home-img img{
+		max-width: 800px;
+		max-height: 550px;
+	}
+
+	.all-circle-img img{
+		margin-left: 12%;
+	}
+
+
+	/* about us section */
+
+	#about-us{
+		margin:0 auto;
+		width: 100%;
+		clear: both;
+	}
+	
+	.about-h{
+		text-align: center;
+		margin-top: 0;
+		margin-bottom: 50px;
+		font-size: 2.5em;
+	}
+	
+	.about-project{
+		background-color: grey;
+		width: 100%;
+		height: 350px;
+		margin-bottom: 15px;
+		clear: both;
+	}
+	
+	.about-project h2,p{
+		color: white;
+		padding: 10px;
+		
+	}
+	
+	.about-project p{
+		line-height: 1.5;
+		text-align: justify;
+	}
+	
+	.sub-projects{
+		width: 100%;
+		height: 350px;
+		position: relative;
+		left: 0px;
+		margin-bottom: 15px;
+		clear: both;
+	}
+	
+	.projects{
+		clear: both;
+		position:relative;	
+	}
+	
+	.projects h2{
+		position: absolute;
+		bottom:85% ;
+		left: 40%;
+		clear: both;
+		font-weight: bold;
+	}
+
+	.technology-box{
+		margin-left: 6%;
+		margin-right: 0%;
+	}
+}
+
+@media(max-width:718px)
+{
+	.technology-box{
+		margin-left: 4%;
+		margin-right: 0%;
+	}
+}
+
+@media(max-width:687px)
+{
+	.technology-box{
+		margin-left: 2%;
+		margin-right: 0%;
+	}
+}
+
+@media(max-width:685px)
+{
+	.all-circle-img img{
+
+		height: 300px;
+		width: 300px;
+		margin:2% 30% 5%;
+	}
+
+	.technology-box{
+		margin-left: 2%;
+		margin-right: 0%;
+	}
+}
+
+@media(max-width:658px)
+{
+	.technology-box{
+		background-color: #e4e3e3;
+		width: 316px;
+		padding: 2px;
+		height: 430px;
+		border-radius: 10px;
+		float: left;
+		margin-left: 26%;
+		margin-right: 0;
+		margin-bottom: 5%;
+	}
+}
+
+@media(max-width:600px)
+{
+	.all-circle-img img{
+
+		height: 300px;
+		width: 300px;
+		margin:2% 25% 5%;
+	}
+
+	/* about us section */
+
+	#about-us{
+		margin:0 auto;
+		width: 100%;
+		clear: both;
+	}
+	
+	.about-h{
+		text-align: center;
+		margin-top: 0;
+		margin-bottom: 50px;
+		font-size: 2.5em;
+	}
+	
+	.about-project{
+		background-color: grey;
+		width: 100%;
+		height: 250px;
+		margin-bottom: 15px;
+		clear: both;
+	}
+	
+	.about-project h2,p{
+		color: white;
+		padding: 10px;
+	}
+	
+	.about-project p{
+		line-height: 1.5;
+		text-align: justify;
+	}
+	
+	.sub-projects{
+		width: 100%;
+		height: 250px;
+		position: relative;
+		left: 0px;
+		margin-bottom: 15px;
+		clear: both;
+	}
+	
+	.projects{
+		clear: both;
+		position:relative;	
+	}
+	
+	.projects h2{
+		position: absolute;
+		bottom:85% ;
+		left: 40%;
+		clear: both;
+		font-weight: bold;
+	}
+}
+
+@media(max-width:500px)
+{
+	.technology-box{
+		background-color: #e4e3e3;
+		width: 316px;
+		padding: 2px;
+		height: 430px;
+		border-radius: 10px;
+		float: left;
+		margin-left: 18%;
+		margin-right: 0;
+		margin-bottom: 8%;
+	}
+}
+
+@media(max-width:450px)
+{
+	#home-img h1{
+		color: white;
+		position: absolute;
+		bottom: 75vh;
+		left: 30px;
+		font-size: 2em;
+		letter-spacing: 2px;
+	}
+
+
+	.all-circle-img img{
+
+		height: 300px;
+		width: 300px;
+		margin:2% 18% 6%;
+	}
+
+	/* about us section */
+
+	#about-us{
+		margin:0 auto;
+		width: 100%;
+		clear: both;
+	}
+	
+	.about-h{
+		text-align: center;
+		margin-top: 0;
+		margin-bottom: 50px;
+		font-size: 2.5em;
+	}
+	
+	.about-project{
+		background-color: grey;
+		width: 100%;
+		height: 200px;
+		margin-bottom: 15px;
+		clear: both;
+	}
+	
+	.about-project h2,p{
+		color: white;
+		padding: 10px;
+	}
+	
+	.about-project p{
+		line-height: 1.5;
+		text-align: justify;
+	}
+	
+	.sub-projects{
+		width: 100%;
+		height: 200px;
+		position: relative;
+		left: 0px;
+		margin-bottom: 15px;
+		clear: both;
+	}
+	
+	.projects{
+		clear: both;
+		position:relative;	
+	}
+	
+	.projects h2{
+		position: absolute;
+		bottom:85% ;
+		left: 50%;
+		clear: both;
+		font-weight: bold;
+	}
+
+	.technology-box{
+		margin-left: 12%;
+		margin-right: 0;
+		margin-bottom: 10%;
+	}
+}
+
+
+@media(max-width:370px)
+{
+	#home-img img{
+		max-width: 800px;
+		max-height: 450px;
+	}
+
+	.all-circle-img img{
+		height: 300px;
+		width: 300px;
+		margin:2% 10% 10%;
+	}
+
+	.technology-box{
+		margin-left: 7%;
+		margin-right: 0;
+		margin-bottom: 12%;
+	}
+}
+
+@media(max-width:343px)
+{
+	#home-img img{
+		width: 342px;
+		max-height: 450px;
+	}
+
+	.technology-box{
+		margin-left: 4%;
+		margin-right: 0;
+		margin-bottom: 12%;
+	}
+
+	.footer-bg{
+		max-width: 350px;
+	}
+}
+
+@media(max-width:335px)
+{
+	/* about us section */
+
+	#about-us{
+		margin:0 auto;
+		width: 100%;
+		clear: both;
+	}
+	
+	.about-h{
+		text-align: center;
+		margin-top: 0;
+		margin-bottom: 50px;
+		font-size: 2.5em;
+	}
+	
+	.about-project{
+		background-color: grey;
+		width: 330px;
+		height: 180px;
+		margin-bottom: 15px;
+		clear: both;
+	}
+	
+	.about-project h2,p{
+		color: white;
+		padding: 10px;
+	}
+	
+	.about-project p{
+		line-height: 1.5;
+		text-align: justify;
+	}
+	
+	.sub-projects{
+		width: 330px;
+		height: 180px;
+		position: relative;
+		left: 0px;
+		margin-bottom: 15px;
+		clear: both;
+	}
+	
+	.projects{
+		clear: both;
+		position:relative;	
+	}
+	
+	.projects h2{
+		position: absolute;
+		bottom:10rem ;
+		left: 7.5rem;
+		clear: both;
+		font-weight: bold;
+	}
+
+	.technology-box{
+		margin-left: 4%;
+		margin-right: 0;
+		margin-bottom: 15%;
+		min-width: 100px;
+	}
+
+	.footer-bg{
+		width: 342px;
+	}
+}
+
+@media(max-width:320px)
+{
+	.all-circle-img img{
+		height: 250px;
+		width: 250px;
+		margin:2% 9% 12%;
+	}
+}
+
+@media(max-width:286px)
+{
+	#home-img h1{
+		color: white;
+		position: absolute;
+		bottom: 74vh;
+		left: 30px;
+		font-size: 1.5em;
+		letter-spacing: 2px;
+	}
+}
+
+@media(max-width:215px)
+{
+	/* about us section */
+
+	#about-us{
+		margin:0 auto;
+		width: 100%;
+		clear: both;
+	}
+	
+	.about-h{
+		text-align: center;
+		margin-top: 0;
+		margin-bottom: 50px;
+		font-size: 2.5em;
+	}
+	
+	.about-project{
+		background-color: grey;
+		width: 330px;
+		height: 180px;
+		margin-bottom: 15px;
+		clear: both;
+	}
+	
+	.about-project h2,p{
+		color: white;
+		padding: 10px;
+		
+	}
+	
+	.about-project p{
+		line-height: 1.5;
+		text-align: justify;
+	}
+	
+	.sub-projects{
+		width: 330px;
+		height: 180px;
+		position: relative;
+		left: 0px;
+		margin-bottom: 15px;
+		clear: both;
+	}
+	
+	.projects{
+		clear: both;
+		position:relative;	
+	}
+	
+	.projects h2{
+		position: absolute;
+		bottom:8.9rem ;
+		left: 6.6rem;
+		clear: both;
+		font-weight: bold;
+	}
+}
+
+@media(max-width:200px)
+{
+	.all-circle-img img{
+
+		height: 200px;
+		width: 200px;
+		margin:2% 17% 15%;
+	}
+
+	.technology-box{
+		margin-left: 4%;
+		margin-right: 0;
+		margin-bottom: 25%;
+		min-width: 100px;
+	}
+
+	.projects h2{
+		position: absolute;
+		bottom:9rem ;
+		left: 6rem;
+		clear: both;
+		font-weight: bold;
+	}
 }
