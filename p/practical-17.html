@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Time Clock with Dynamic Greeting</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: 'Quicksand', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+            height: 100vh;   
+            background-position: center;
+            background-size: cover; 
+        }
+        #time{
+            font-size: 8rem;
+        }
+        h1,h2{
+            margin-bottom: 1rem;
+        }
+        h2{
+            font-size: 3rem;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <time id="time"></time>
+    <h1 id="greeting"></h1>
+    <h2 id="name" contenteditable="true"></h2>
+    <h3 id="date"></h3>
+    
+    <script src="../JavaScript/pract-17(live_clock).js"></script>
+</body>
+</html>
