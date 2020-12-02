@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient( 109.6deg,  rgba(121,203,202,1) 11.2%, rgba(119,161,211,1) 91.1% );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container{
+    width: 360px;
+    height: 400px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    position: relative;
+    padding-bottom: 2rem;
+    overflow: hidden;
+}
+
+.container .step-row{
+    width: 360px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px -1px 5px -1px #000 !important;
+}
+
+.container .step-row .step-col{
+    z-index: 1;
+    margin: auto;
+    width: 130px;
+    text-align: center;
+}
+
+.container .step-row #progress{
+    background-color: palevioletred;
+    width: 130px;
+    height: 100%;
+    position: absolute;
+    transition: 1s;
+}
+
+.container .step-row #progress::after{
+    content: '';
+    position: absolute;
+    right: 0px;
+    width: 0px;
+    height: 0px;
+    border-top: 25px solid white;
+    border-bottom: 25px solid white;
+    border-left: 25px solid palevioletred;
+    border-right: -25px;
+}
+
+.container form{
+    height: 200px;
+    width:300px;
+    position: absolute;
+    left: 30px;
+    top: 80px;
+    transition: .5s;
+}
+.container #form2, .container #form3{
+    position: absolute;
+    left: 450px;
+}
+
+form h2{
+    padding-bottom: 2.5rem;
+    text-align: center;
+    color: gray;
+}
+form input{
+    display: block;
+    width: 100%;
+    padding: 10px 5px;
+    margin-bottom: 10px;
+    border: none;
+    border-bottom: 2px solid lightgray;
+    outline: none;
+    background: transparent;
+}
+
+form button{
+    display: inline-block;
+    border: none;
+    outline: none;
+    background-color: palevioletred;
+    color: white;
+    padding: 10px 40px;
+    margin: 2rem 1rem;
+    border-radius: 10px;
+}
+
+form button#next1{
+    display:block;
+    margin: 2rem auto;
+}
